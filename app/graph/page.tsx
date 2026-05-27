@@ -15,7 +15,7 @@ export default function GraphPage() {
         }}
       >
         <p>グラフ機能は準備中です。</p>
-        <p>次にrechartsを追加して体温推移を表示します。</p>
+        <p>次にCommit changesを追加して体温推移を表示します。</p>
       </div>
 
       <a href="/">
