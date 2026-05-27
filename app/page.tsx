@@ -1,5 +1,3 @@
-"use client";
-
 export default function Home() {
   return (
     <main
@@ -11,7 +9,7 @@ export default function Home() {
     >
       <h1
         style={{
-          fontSize: 40,
+          fontSize: 36,
           fontWeight: "bold",
           color: "#0f172a",
         }}
@@ -19,74 +17,44 @@ export default function Home() {
         Baby Health Log
       </h1>
 
-      {[
-        ["今日の体温", "36.8℃"],
-        ["授乳回数", "5回"],
-        ["昼の服装", "半袖＋薄手おくるみ"],
-        ["夜の服装", "長袖＋スリーパー"],
-      ].map((x) => (
-        <div
-          key={x[0]}
-          style={{
-            background: "white",
-            padding: 20,
-            marginTop: 20,
-            borderRadius: 20,
-            color: "#0f172a",
-          }}
-        >
-          <h2>{x[0]}</h2>
-          <h1>{x[1]}</h1>
-        </div>
-      ))}
+      <div
+        style={{
+          background: "white",
+          padding: 20,
+          borderRadius: 20,
+          marginTop: 20,
+        }}
+      >
+        <h2>今日の体温</h2>
+        <p>36.8℃</p>
+      </div>
 
       <div
         style={{
+          background: "white",
+          padding: 20,
+          borderRadius: 20,
           marginTop: 20,
-          display: "grid",
-          gap: 14,
         }}
       >
-        <a href="/record">
-          <button style={btn}>
-            記録する
-          </button>
-        </a>
-
-        <a href="/history">
-          <button style={btn}>
-            過去の記録
-          </button>
-        </a>
-
-        <a href="/graph">
-          <button style={btn}>
-            グラフ
-          </button>
-        </a>
-
-        <a href="/clothes">
-          <button style={btn}>
-            服装提案
-          </button>
-        </a>
-
-        <a href="/night">
-          <button style={btn}>
-            夜モード
-          </button>
-        </a>
+        <h2>授乳回数</h2>
+        <p>5回</p>
       </div>
+
+      <a href="/history">
+        <button
+          style={{
+            marginTop: 30,
+            width: "100%",
+            height: 60,
+            background: "#2563eb",
+            color: "white",
+            borderRadius: 20,
+          }}
+        >
+          過去の記録を見る
+        </button>
+      </a>
     </main>
   );
 }
-
-const btn = {
-  width: "100%",
-  height: 60,
-  borderRadius: 18,
-  border: "none",
-  background: "#2563eb",
-  color: "white",
-  fontSize: 18,
-};
